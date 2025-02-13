@@ -1,0 +1,16 @@
+​version: 2.1
+
+jobs:
+  build-1:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout  # リポジトリからコードをチェックアウト
+      - run: echo "tessshhhhhhhsssttttt"
+      - run: echo "aaaaaaaaaaaaaaaaaaaa"
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build-1
