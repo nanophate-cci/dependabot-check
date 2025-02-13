@@ -4,6 +4,6 @@ source 'https://rubygems.org'
 gem 'sinatra', '1.4.7'
 
 # Older version of Nokogiri
-gem 'nokogiri', '1.13.0'
+gem 'nokogiri', '1.16.5'
 
 gem 'rack', '1.6.13'

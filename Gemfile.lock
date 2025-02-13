@@ -1,9 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    mini_portile2 (2.7.1)
-    nokogiri (1.13.0)
-      mini_portile2 (~> 2.7.0)
+    mini_portile2 (2.8.8)
+    nokogiri (1.16.5)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
     racc (1.8.1)
     rack (1.6.13)
@@ -20,7 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nokogiri (= 1.13.0)
+  nokogiri (= 1.16.5)
   rack (= 1.6.13)
   sinatra (= 1.4.7)
 
