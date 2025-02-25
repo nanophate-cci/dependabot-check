@@ -15,7 +15,7 @@ workflows:
     when:
       not:
         and:
-          - equal: [ "push", << pipeline.vcs.event_type >> ]
+          - equal: [ "webhook", << pipeline.trigger_source >> ]
           - matches:
             pattern: "^dependabot.*$"
             value: << pipeline.git.branch >>
