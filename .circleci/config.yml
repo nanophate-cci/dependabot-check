@@ -14,3 +14,10 @@ workflows:
   build:
     jobs:
       - build-1
+    when:
+      not:
+        and:
+          - equal: [ push, << pipeline.vcs.event_type >> ]
+          - matches:
+              pattern: "^dependabot.*$"
+              value: << pipeline.git.branch >>
