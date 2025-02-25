@@ -1,5 +1,6 @@
 ​version: 2.1
 
+
 jobs:
   build-1:
     docker:
@@ -11,13 +12,8 @@ jobs:
 
 workflows:
   version: 2
-  build:
-    jobs:
-      - build-1
-    when:
-      not:
-        and:
-          - equal: [ push, << pipeline.vcs.event_type >> ]
-          - matches:
-              pattern: "^dependabot.*$"
-              value: << pipeline.git.branch >>
+  run_workflow:
+      jobs:
+          - build-1
+      when:
+          equal: [ push, << pipeline.vcs.event_type >> ]
